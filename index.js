@@ -1,9 +1,9 @@
+const cheerio = require('cheerio');
+
 module.exports = {
-  blocks: {
-    talbe : {
-      process(content) {
-        console.log(JSON.stringify(content));
-      }
+  hooks: {
+    'page': function(page) {
+      console.log(JSON.stringify(page));
     }
   }
 }
